@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose DashBoard</title>
+</head>
+<body>
+	<h1>Welcome to Peter's Mongoose DashBoard!</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Weight</th>
+			</tr>
+		</thead>
+		<% for(var i in mongoose){ %>
+			<tr>
+				<td><a href="/mongooses/<%=mongoose[i]._id%>"><%=mongoose[i].name%></a></td>
+				<td><%=mongoose[i].weight%></td>
+			</tr>
+		<% } %>
+	</table>
+	<a href="/mongooses/new">Create New Mongoose</a>
+</body>
+</html>

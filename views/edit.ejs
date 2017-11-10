@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose DashBoard</title>
+</head>
+<body>
+	<form action="/mongooses/<%=mongoose._id%>" method="post">
+		<p>Name: <input type="text" name="name" value="<%=mongoose.name%>"></p>
+		<p>Weight: <input type="number" name="weight" value="<%=mongoose.weight%>"></p>
+		<button type="submit">Update</button>
+	</form>
+	<button><a href="/">Go Back</a></button>
+</body>
+</html>
